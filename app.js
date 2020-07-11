@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const config = require('config')
 const bodyParser = require('body-parser')
+const cors = require('cors')
 
 const { PizzaCtrl } = require('./controllers')
 
@@ -9,9 +10,11 @@ const app = express()
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
+app.use(cors())
 
-app.get('/pizzas', PizzaCtrl.read)
-app.post('/pizzas', PizzaCtrl.create)
+app.get('/api/pizzas', PizzaCtrl.all)
+app.post('/api/pizzas', PizzaCtrl.create)
+app.patch('/api/pizzas/:id', PizzaCtrl.update)
 
 const PORT = config.get('port') || 5000
 async function start() {

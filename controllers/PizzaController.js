@@ -28,7 +28,41 @@ const create = function (req, res) {
   })
 }
 
-const read = function (req, res) {
+const update = function (req, res) {
+  const pizzaId = req.params.id
+
+  const data = {
+    imageUrl: req.body.imageUrl,
+    name: req.body.name,
+    types: req.body.types,
+    sizes: req.body.sizes,
+    price: req.body.price,
+    category: req.body.category,
+    rating: req.body.rating,
+  }
+
+  Pizza.updateOne({ _id: pizzaId }, { $set: data }, function (err, doc) {
+    if (!doc) {
+      return res.status(404).json({
+        success: false,
+        message: 'PIZZA_NOT_FOUND',
+      })
+    }
+
+    if (err) {
+      return res.status(500).json({
+        success: false,
+        message: err,
+      })
+    }
+
+    res.status(200).json({
+      success: true,
+    })
+  })
+}
+
+const all = function (req, res) {
   Pizza.find({}, function (err, doc) {
     if (err) {
       return res.status(500).json({
@@ -46,7 +80,8 @@ const read = function (req, res) {
 
 PizzaController.prototype = {
   create,
-  read,
+  all,
+  update,
 }
 
 module.exports = PizzaController

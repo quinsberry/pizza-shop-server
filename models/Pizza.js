@@ -6,7 +6,7 @@ const schema = new Schema({
   types: Array,
   sizes: Array,
   price: Number,
-  category: Number,
+  category: String,
   rating: Number,
 })
 
