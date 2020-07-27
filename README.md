@@ -65,8 +65,8 @@ For starting server in development mode: </br>
 
 - code: 500, 404
 - messages:
-  _MongoDB error messages_,
-  'CATEGORY_NOT_FOUND',
+  _MongoDB error messages_, </br>
+  'CATEGORY_NOT_FOUND', </br>
   'Type not found'
   </br>
 
@@ -130,6 +130,6 @@ For starting server in development mode: </br>
 
 - code: 500, 404
 - messages:
-  _MongoDB error messages_,
+  _MongoDB error messages_, </br>
   'PIZZA_NOT_FOUND'
   </br>
