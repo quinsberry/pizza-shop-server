@@ -14,7 +14,7 @@ For starting server in development mode: </br>
 </br>
 
 **Error response type:** `{ success: boolean, message: string }` </br>
-**Error response example:**
+**Error response example:** </br>
 ![Error example](https://user-images.githubusercontent.com/57848626/88582410-58df9000-d057-11ea-8ce4-a6d54e979738.JPG)
 
 ### Requests
