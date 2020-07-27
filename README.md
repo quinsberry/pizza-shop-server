@@ -7,6 +7,9 @@ It can create, read, update and sorting the pizzas. </br>
 Technologies: Node, Express, MongoDB </br>
 Libraries: body-parser, config, cors, lodash </br>
 
+[Link to client side source code](https://github.com/quinsberry/pizza-shop-client)
+</br>
+
 ## API Documentation
 
 For starting server in development mode: </br>
