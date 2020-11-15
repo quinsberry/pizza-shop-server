@@ -7,7 +7,7 @@ It can create, read, update and sorting the pizzas. </br>
 Technologies: Node, Express, MongoDB </br>
 Libraries: body-parser, config, cors, lodash </br>
 
-[Link to client side source code](https://github.com/quinsberry/pizza-shop-client)
+[Link to pizza shop](https://pizzas-shop.herokuapp.com/) | [Link to client code](https://github.com/quinsberry/pizza-shop-client) </br>
 </br>
 
 ## API Documentation
