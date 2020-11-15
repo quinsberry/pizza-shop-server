@@ -16,7 +16,7 @@ app.get('/api/pizzas', PizzaCtrl.all)
 app.post('/api/pizzas', PizzaCtrl.create)
 app.patch('/api/pizzas/:id', PizzaCtrl.update)
 
-const PORT = config.get('port') || 5000
+const PORT = process.env.PORT || 8080
 async function start() {
   try {
     await mongoose.connect(config.get('mongoUri'), {
